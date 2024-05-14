@@ -1,0 +1,41 @@
+{
+  "title": "A inventory form",
+  "description": "A simple inventory example.",
+  "type": "object",
+  "required": [
+    "equipment",
+    "servers",
+    "cameras",
+    "printers"
+  ],
+  "properties": {
+    "equipment": {
+      "id": "computers",
+      "type": "number",
+      "title": "Computer Hardware",
+      "default": "Chuck",
+      "name": "computers"
+    },
+    "servers": {
+      "id": "servers",
+      "type": "number",
+      "title": "Servers Hardware",
+      "default": "Chuck",
+      "name": "servers"
+    },
+    "cameras": {
+      "id": "cameras",
+      "type": "number",
+      "title": "Cameras",
+      "default": "Chuck",
+      "name": "cameras"
+    },
+    "printers": {
+      "id": "printers",
+      "type": "number",
+      "title": "Printers",
+      "default": "Chuck",
+      "name": "printers"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "title": "A Inventory form",
+  "description": "Select the ones who apply to you.",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "networkswitch": {
+      "id": "networkswitch",
+      "type": "checkbox",
+      "title": "Switch",
+      "name": "networkswitch"
+    },
+    "accesspoint": {
+      "id": "accesspoint",
+      "type": "checkbox",
+      "title": "Access point",
+      "name": "accesspoint"
+    },
+    "networkrouter": {
+      "id": "networkrouter",
+      "type": "checkbox",
+      "title": "Router",
+      "name": "networkrouter"
+    },
+    "voip": {
+      "id": "voip",
+      "type": "checkbox",
+      "title": "Vo IP",
+      "name": "voip"
+    }
+  }
+}

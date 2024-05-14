@@ -1,0 +1,33 @@
+{
+  "title": "A registration form",
+  "description": "A simple form example.",
+  "type": "object",
+  "required": [
+    "name",
+    "email",
+    "tel"
+  ],
+  "properties": {
+    "name": {
+      "id": "name",
+      "type": "string",
+      "title": "Name",
+      "default": "Chuck",
+      "name": "name"
+    },
+    "email": {
+      "id": "email",
+      "type": "email",
+      "title": "Email",
+      "default": "example@company.com",
+      "name": "email"
+    },
+    "tel": {
+      "id": "tel",
+      "type": "tel",
+      "title": "Telephone",
+      "default": "example@company.com",
+      "name": "tel"
+    }
+  }
+}

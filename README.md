@@ -34,3 +34,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Tools and Utils for Forms
+
+We will follow the Vercel [guide](https://nextjs-ja-translation-docs.vercel.app/docs/guides/building-forms) to building forms. Also check the documentation for more deep understanding of [formData API](https://nextjs.org/docs/pages/building-your-application/data-fetching/forms-and-mutations) in next.js and [React.js](https://react.dev/reference/react-dom/components/form#noun-labs-1201738-(2))
