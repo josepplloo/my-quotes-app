@@ -4,10 +4,10 @@ export enum QuoteFormFields {
   tel = "tel",
 };
 
-type FieldValueType = string | boolean | number;
+export type FieldValueType = string | boolean | number;
 
 export interface FormEntry {
-  fieldID: QuoteFormFields;
+  fieldID: string;
   fieldValue: FieldValueType
 };
 

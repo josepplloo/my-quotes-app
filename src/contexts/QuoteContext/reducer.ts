@@ -62,15 +62,14 @@ export const actionCreators = {
   }),
 };
 
-export const reducer = (state: QuoteState, action: Action): QuoteState => {
-  console.log(state, action);
-  
+export const reducer = (state: QuoteState, action: Action): QuoteState => {  
   switch (action.type) {
     case ActionsTypes.SET_STEP_NUMBER: {
       return { ...state, [STEP_NUMBER]: action.payload };
     }
     case ActionsTypes.SET_FORM: {
-      return { ...state, form: { ...state.form, ...action.payload } };
+      const field = {[action.payload.fieldID]: action.payload.fieldValue}
+      return { ...state, form: { ...state.form, ...field } };
     }
     case ActionsTypes.SET_RULE_1: {
       // TODO: Rules implementations should be in another file
