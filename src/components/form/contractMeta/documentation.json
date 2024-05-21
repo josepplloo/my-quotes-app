@@ -1,0 +1,32 @@
+{
+  "title": "Documentation",
+  "description": "Select the ones who apply to you.",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "tier1": {
+      "id": "tier1",
+      "type": "radio",
+      "title": "Tier 1: product manuals",
+      "name": "documentation"
+    },
+    "tier2": {
+      "id": "tier2",
+      "type": "radio",
+      "title": "Tier 2: User guides",
+      "name": "documentation"
+    },
+    "tier3": {
+      "id": "tier3",
+      "type": "radio",
+      "title": "Tier 3: Repair manuals",
+      "name": "documentation"
+    },
+    "tier4": {
+      "id": "tier4",
+      "type": "radio",
+      "title": "tier4: API documentation",
+      "name": "documentation"
+    }
+  }
+}
