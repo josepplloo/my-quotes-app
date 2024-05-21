@@ -1,5 +1,5 @@
 "use client";
-import { useDispatch, useSelector } from "@/contexts/QuoteContext";
+import { useDispatch } from "@/contexts/QuoteContext";
 import { actionCreators } from "@/contexts/QuoteContext/reducer";
 import { FieldValueType } from "./types";
 
