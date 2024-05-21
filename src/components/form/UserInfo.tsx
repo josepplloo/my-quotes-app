@@ -25,7 +25,7 @@ export const UserInfoForm = () => {
         <BasicInput {...cameras} />
         <BasicInput {...printers} />
       </section>
-      <fieldset className="mb-3" disabled>
+      <fieldset className="mb-3">
         <h2 className="text-lg">{userInfoTech.title}</h2>
         <p className="text-sm">{userInfoTech.description}</p>
         <BasicInput {...networkswitch} />
