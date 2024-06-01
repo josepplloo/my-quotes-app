@@ -2,7 +2,6 @@
 import { useDispatch, useSelector } from "@/contexts/QuoteContext";
 import { actionCreators } from "@/contexts/QuoteContext/reducer";
 import { BasicInput } from "../form/BasicInput";
-import { FieldValueType } from "../form/types";
 
 const budgetMeta = {
   title: "Budget",
