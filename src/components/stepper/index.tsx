@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image"; 
 import { useDispatch, useSelector } from "@/contexts/QuoteContext";
 import { actionCreators } from "@/contexts/QuoteContext/reducer";
 
@@ -28,38 +28,55 @@ export const Stepper = ({
   const state = useSelector((state) => state);
 
   const currentStep = state.STEP_NUMBER;
+  const isCurrent = index === state.STEP_NUMBER; 
 
   const activeColor = (index: number) =>
-    currentStep >= index ? "indigo-500" : "gray-300";
+    currentStep >= index ? "black" : "gray-300";
   const isFinalStep = (index: number) => index === numberOfSteps - 1;
 
   const dispatch = useDispatch();
-  const handleNext = () => {
-    dispatch(actionCreators.setStepNumber(state.STEP_NUMBER + 1));
-  };
-  const handlePrevious = () => {
-    dispatch(actionCreators.setStepNumber(state.STEP_NUMBER - 1));
+  const handleNext = (index: number) => {
+    dispatch(actionCreators.setStepNumber(index));
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="flex items-center">
+    <div className="flex flex-col items-center overflow-hidden transition-max-height max-h-[32]">
+      <button
+        onClick={() => handleNext(index)}
+        className={`flex items-center border-2 dark:invert hover:indigo-400 border-${isCurrent ? 'black': 'gray-300'}`}
+      >
         <div key={index} className="flex items-center">
           {isFinalStep(index) ? null : (
-            <div className={`mr-4 w-1 h-12 bg-${activeColor(index)}`}></div>
+            <div className={`w-1 h-12 bg-${activeColor(index)}`}></div>
           )}
+          {/* circle */}
           <div
-            className={`w-8 h-8 rounded-full flex items-center justify-center border-2 border-${activeColor(index)} text-${activeColor(index)}`}
+            className={`mx-4 w-8 h-8 rounded-full flex items-center justify-center border border-black bg-${isCurrent ? 'black': 'white'}`}
           >
-            {"0" + (index + 1)}
+            { currentStep > index ?
+            <Image
+              className="relative"
+              src="/checkmark.svg"
+              alt="Checkmark Logo"
+              width={24}
+              height={24}
+              priority
+            />
+            :<p className={`text-${isCurrent ? 'white dark:black': 'gray-300 dark:invert'}`}>{"0" + (index + 1)}</p>}
           </div>
         </div>
-        <div key={index} className="pl-4 flex flex-col items-start">
-          <p className={`text-${activeColor(index)} font-semibold`}>{STEPS[index as keyof typeof STEPS]?.title}</p>
-          <p className={`text-${activeColor(index)} font-light`}>{STEPS[index as keyof typeof STEPS]?.description}</p>
-        </div>
+        <article key={index} className="pl-4 px-2 flex flex-col items-start dark:invert">
+          <p className={`text-${activeColor(index)} font-${isCurrent ? 'semibold': 'normal'}`}>
+            {STEPS[index as keyof typeof STEPS]?.title}
+          </p>
+          <p className={`text-${activeColor(index)} font-light`}>
+            {STEPS[index as keyof typeof STEPS]?.description}
+          </p>
+        </article>
+      </button  >
+      <div className={`overflow-auto ${isCurrent ? 'max-h-[300px]': 'max-h-0'} transition-[max-height] duration-500 ease-in-out`}>
+        {children}
       </div>
-      {index === state.STEP_NUMBER ? children : <div></div>}
       <div></div>
     </div>
   );

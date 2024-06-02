@@ -16,16 +16,16 @@ export const StepperButtons = () => {
 
   return (
     <>
-      <section className="flex gap-10">
+      <section className="flex justify-self-center mt-3 gap-10">
         <button
           onClick={handlePrevious}
-          className="bg-blue-600 text-white p-2 rounded-md"
+          className="bg-black text-white p-2 rounded-md min-w-40"
         >
           Previous step
         </button>
         <button
           onClick={handleNext}
-          className="bg-blue-600 text-white p-2 rounded-md"
+          className="bg-black text-white p-2 rounded-md min-w-40"
         >
           Next step
         </button>
