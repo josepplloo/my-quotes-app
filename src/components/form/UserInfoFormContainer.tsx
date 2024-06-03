@@ -11,13 +11,13 @@ export const UserInfoFormContainer = () => {
   return(
     <div className="mb-32 mt-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-3 lg:text-left">
         <QuoteProvider>
-          <Stepper key="0" index={0}>
+          <Stepper key="step-0" index={0}>
             <UserInfoForm />
           </Stepper>
-          <Stepper key="1" index={1}>
+          <Stepper key="step-1" index={1}>
             <InfrastructureForm />
           </Stepper>
-          <Stepper key="2" index={2}>
+          <Stepper key="step-2" index={2}>
             <section className="lg:grid-cols-3">
               <ContractInfoForm />
               <BudgetInput />

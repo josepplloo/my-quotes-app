@@ -1,4 +1,5 @@
 import { FormEntry, type QuoteFormInterface } from "@/components/form/types";
+import { pricing } from "@/utils/rules/pricing";
 
 const STEP_NUMBER = "STEP_NUMBER";
 
@@ -69,7 +70,13 @@ export const reducer = (state: QuoteState, action: Action): QuoteState => {
     }
     case ActionsTypes.SET_FORM: {
       const field = {[action.payload.fieldID]: action.payload.fieldValue}
-      return { ...state, form: { ...state.form, ...field } };
+      //It'll call the rules each time I use the state
+      const newState = pricing(state, field);
+      return { 
+        ...state,
+        form: { ...state.form, ...field },
+        quote: {...state.quote, ...newState.quote }
+      };
     }
     case ActionsTypes.SET_RULE_1: {
       // TODO: Rules implementations should be in another file
