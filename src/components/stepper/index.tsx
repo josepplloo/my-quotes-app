@@ -18,11 +18,10 @@ const STEPS = {
     description: "insert your contact info",
   },
 };
+
 export const Stepper = ({
-  children,
   index,
 }: Readonly<{
-  children: React.ReactNode;
   index: number;
 }>) => {
   const state = useSelector((state) => state);
@@ -40,10 +39,10 @@ export const Stepper = ({
   };
 
   return (
-    <div className="flex flex-col items-center overflow-hidden transition-max-height max-h-[32]">
+    <div className="col-span-1 h-24 w-96">
       <button
         onClick={() => handleNext(index)}
-        className={`flex items-center border-2 dark:invert hover:indigo-400 border-${isCurrent ? 'black': 'gray-300'}`}
+        className={`w-full flex items-center border-2 dark:invert hover:indigo-400 border-${isCurrent ? 'black': 'gray-300'}`}
       >
         <div className="flex items-center">
           {isFinalStep(index) ? null : (
@@ -74,10 +73,24 @@ export const Stepper = ({
           </p>
         </article>
       </button  >
-      <div className={`overflow-auto ${isCurrent ? 'max-h-[300px]': 'max-h-0'} transition-[max-height] duration-500 ease-in-out`}>
-        {children}
-      </div>
-      <div></div>
     </div>
   );
 };
+
+export const StepAccordion = ({
+  children,
+  index,
+}: Readonly<{
+  children: React.ReactNode;
+  index: number;
+}>) => {
+  const state = useSelector((state) => state);
+
+  const isCurrent = index === state.STEP_NUMBER; 
+
+  return (
+      <div className={`max-h-60 overflow-auto ${isCurrent ? 'max-h-[300px]': 'max-h-0 w-0 h-0'} transition-[max-height] duration-500 ease-in-out`}>
+        {children}
+      </div>
+  );
+}
