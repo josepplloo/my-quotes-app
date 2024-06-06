@@ -7,19 +7,19 @@
     "corrective": {
       "id": "corrective",
       "type": "radio",
-      "title": "Corrective",
+      "title": "1 per year",
       "name": "maintenance"
     },
     "preventive": {
       "id": "preventive",
       "type": "radio",
-      "title": "Preventive",
+      "title": "2 per year",
       "name": "maintenance"
     },
     "predictive": {
       "id": "predictive",
       "type": "radio",
-      "title": "Predictive",
+      "title": "3 per year",
       "name": "maintenance"
     },
     "proactive": {
