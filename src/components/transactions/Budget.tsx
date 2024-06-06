@@ -18,6 +18,7 @@ const budgetMeta = {
   },
 };
 
+// TODO: update this component given the new rules of the business
 export const BudgetInput = () => {
   const state = useSelector((state) => state);
   const { invested, total, net } = state.quote;

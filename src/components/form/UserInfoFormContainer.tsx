@@ -9,7 +9,7 @@ import { InfrastructureForm } from './InfrastructureForm';
 
 export const UserInfoFormContainer = () => {
   return(
-    <div className="mb-32 mt-32 text-center lg:mb-0 lg:text-left">
+    <div className="mb-32 mt-12 text-center lg:mb-0 lg:text-left">
         <QuoteProvider>
           <section className="grid lg:grid-cols-3 place-content-center">
             <Stepper key="step-0" index={0} />
@@ -24,7 +24,7 @@ export const UserInfoFormContainer = () => {
               <InfrastructureForm />
             </StepAccordion>
             <StepAccordion key="step-2" index={2}>
-              <section className="lg:grid-cols-3">
+              <section className="grid lg:grid-cols-3">
                 <ContractInfoForm />
                 <BudgetInput />
                 <BillStats />
