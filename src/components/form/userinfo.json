@@ -15,6 +15,13 @@
       "default": "Chuck",
       "name": "name"
     },
+    "contact": {
+      "id": "contact",
+      "type": "string",
+      "title": "Contact",
+      "default": "Chuck",
+      "name": "contact"
+    },
     "email": {
       "id": "email",
       "type": "email",

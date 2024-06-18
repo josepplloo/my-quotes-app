@@ -2,7 +2,6 @@
 import { useDispatch, useSelector } from "@/contexts/QuoteContext";
 import { actionCreators } from "@/contexts/QuoteContext/reducer";
 import { BasicInput } from "../form/BasicInput";
-import { FieldValueType } from "../form/types";
 
 const budgetMeta = {
   title: "Budget",
@@ -19,6 +18,7 @@ const budgetMeta = {
   },
 };
 
+// TODO: update this component given the new rules of the business
 export const BudgetInput = () => {
   const state = useSelector((state) => state);
   const { invested, total, net } = state.quote;
