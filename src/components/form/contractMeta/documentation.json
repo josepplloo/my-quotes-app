@@ -1,5 +1,5 @@
 {
-  "title": "Documentation",
+  "title": "Service Promise",
   "description": "Select the ones who apply to you.",
   "type": "object",
   "required": [],
@@ -7,26 +7,38 @@
     "tier1": {
       "id": "tier1",
       "type": "radio",
-      "title": "Tier 1: product manuals",
-      "name": "documentation"
+      "title": "SLA: 3 hour max",
+      "name": "sla"
     },
     "tier2": {
       "id": "tier2",
       "type": "radio",
-      "title": "Tier 2: User guides",
-      "name": "documentation"
+      "title": "SLA: 4 hour min",
+      "name": "sla"
     },
     "tier3": {
       "id": "tier3",
       "type": "radio",
-      "title": "Tier 3: Repair manuals",
+      "title": "SLA: 6 hour min",
+      "name": "sla"
+    },
+    "documentation": {
+      "id": "documentation",
+      "type": "checkbox",
+      "title": "Documentation",
       "name": "documentation"
     },
-    "tier4": {
-      "id": "tier4",
-      "type": "radio",
-      "title": "tier4: API documentation",
-      "name": "documentation"
+    "report": {
+      "id": "report",
+      "type": "checkbox",
+      "title": "Monthly report",
+      "name": "report"
+    },
+    "branches": {
+      "id": "branches",
+      "type": "checkbox",
+      "title": "Additional Branches",
+      "name": "branches"
     }
   }
 }

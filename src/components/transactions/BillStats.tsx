@@ -5,8 +5,8 @@ export const BillStats = () => {
   const state = useSelector((state) => state);
   const { invested, total, net } = state.quote;
   return (
-    <section className="p-4">
-      <article className="p-2 border-collapse border rounded-md border-slate-400">
+    <section className="relative p-4">
+      <article className={`${state.STEP_NUMBER===2 && 'fixed'} w-60 p-2 border-collapse border rounded-md border-slate-400`}>
         <p className="text-base bg-gradient-to-r from-black-500">
           Transaction details:
         </p>
