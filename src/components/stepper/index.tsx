@@ -55,7 +55,7 @@ export const Stepper = ({
             { currentStep > index ?
             <Image
               className="relative"
-              src="/checkmark.svg"
+              src="/my-quotes-app/checkmark.svg"
               alt="Checkmark Logo"
               width={24}
               height={24}
