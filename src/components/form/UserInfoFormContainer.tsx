@@ -24,10 +24,12 @@ export const UserInfoFormContainer = () => {
               <InfrastructureForm />
             </StepAccordion>
             <StepAccordion key="step-2" index={2}>
-              <section className="grid lg:grid-cols-3">
+              <section className="grid lg:grid-cols-2">
                 <ContractInfoForm />
-                <BudgetInput />
-                <BillStats />
+                <>
+                  {/* <BudgetInput /> */}
+                  <BillStats />
+                </>
               </section>
             </StepAccordion>
           </section>

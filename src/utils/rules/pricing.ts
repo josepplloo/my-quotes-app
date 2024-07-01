@@ -5,7 +5,8 @@ type FormEntry = {
   [x: string]: FieldValueType;
 };
 
-const HOT_KEYS = ['maintenance', 'support', 'documentation'];
+const HOT_KEYS = ['maintenance', 'support', 'documentation','sla'];
+
 
 export const pricing = (state: QuoteState, field: FormEntry):QuoteState => {
   let auxState = {...state};

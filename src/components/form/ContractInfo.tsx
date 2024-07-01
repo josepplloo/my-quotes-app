@@ -16,8 +16,8 @@ export const ContractInfoForm = () => {
           <p className="text-sm">{maintenance.description}</p>
         </legend>
         <BasicInput {...corrective} />
-        <BasicInput {...predictive} />
         <BasicInput {...preventive} />
+        <BasicInput {...predictive} />
       </fieldset>
      <fieldset className="p-2 mb-3 border rounded">
         <h2 className="text-lg">{support.title}</h2>
