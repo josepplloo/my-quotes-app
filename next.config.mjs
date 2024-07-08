@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/my-quotes-app",
+  basePath: process.env.BASE_PATH || '',
   output: "export",
   reactStrictMode: true,
 };

@@ -1,5 +1,5 @@
 import userInfo from "./userinfo.json";
-import {BasicInput} from "./BasicInput";
+import {BasicInput} from "./BasicInput/BasicInput";
 
 export const UserInfoForm = () => {
   const { name, contact, email, tel } = userInfo.properties;

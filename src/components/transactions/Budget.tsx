@@ -1,7 +1,7 @@
 "use client";
 import { useDispatch, useSelector } from "@/contexts/QuoteContext";
 import { actionCreators } from "@/contexts/QuoteContext/reducer";
-import { BasicInput } from "../form/BasicInput";
+import { BasicInput } from "../form/BasicInput/BasicInput";
 
 const budgetMeta = {
   title: "Budget",

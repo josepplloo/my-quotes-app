@@ -1,12 +1,13 @@
 import maintenance from "./contractMeta/maintenance.json";
 import support from "./contractMeta/support.json";
 import sla from "./contractMeta/documentation.json";
-import {BasicInput} from "./BasicInput";
+import { BasicInput } from "./BasicInput/BasicInput";
 
 export const ContractInfoForm = () => {
   const { corrective, predictive, preventive } = maintenance.properties;
   const { level1, level2, level3 } = support.properties;
-  const { tier1, tier2, tier3, documentation, branches, report } = sla.properties;
+  const { tier1, tier2, tier3, documentation, branches, report } =
+    sla.properties;
 
   return (
     <div className="w-full p-4">
@@ -16,10 +17,10 @@ export const ContractInfoForm = () => {
           <p className="text-sm">{maintenance.description}</p>
         </legend>
         <BasicInput {...corrective} />
-        <BasicInput {...predictive} />
         <BasicInput {...preventive} />
+        <BasicInput {...predictive} />
       </fieldset>
-     <fieldset className="p-2 mb-3 border rounded">
+      <fieldset className="p-2 mb-3 border rounded">
         <h2 className="text-lg">{support.title}</h2>
         <p className="text-sm">{support.description}</p>
         <BasicInput {...level1} />

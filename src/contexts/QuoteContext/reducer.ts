@@ -18,6 +18,12 @@ export const INITIAL_STATE: QuoteState = {
     tel: "",
   },
   quote: {
+    maintenance: 0,
+    support: 0,
+    sla: 0,
+    documentation: 0,
+    report: 0,
+    branches: 0,
     budget: 0,
     invested: 0,
     total: 0,
@@ -70,7 +76,9 @@ export const reducer = (state: QuoteState, action: Action): QuoteState => {
     }
     case ActionsTypes.SET_FORM: {
       const field = {[action.payload.fieldID]: action.payload.fieldValue}
-      //It'll call the rules each time I use the state
+      
+      // It'll call the rules each time I use the state
+      // The rules are in src/utils/rules/pricing.ts
       const newState = pricing(state, field);
       return { 
         ...state,

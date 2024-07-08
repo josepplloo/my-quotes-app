@@ -1,9 +1,17 @@
 import userInfoTech from "./usertech.json";
-import {BasicInput} from "./BasicInput";
+import { BasicInput } from "./BasicInput/BasicInput";
 // import networkingInfo from "./networkinginfo.json";
 
 export const InfrastructureForm = () => {
-  const { equipment, servers, cameras, inkPrinters, laserPrinters, posPrinters, netDevices } = userInfoTech.properties;
+  const {
+    equipment,
+    servers,
+    cameras,
+    inkPrinters,
+    laserPrinters,
+    posPrinters,
+    netDevices,
+  } = userInfoTech.properties;
   // const { networkswitch, networkrouter, accesspoint, voip } = networkingInfo.properties;
 
   return (
