@@ -32,12 +32,12 @@ export const schema ={
 };  
 
 export const schemaStep2 = yup.object().shape({
-  cameras: yup.number().required('The number of cameras is required').positive('The number of cameras has to be positive').integer(),
-  computers: yup.number().required('The number of computers is required').positive('The number of computers has to be positive').integer(),
-  inkPrinters: yup.number().required('The number of ink printers is required').positive('The number of ink printers has to be positive').integer(),
-  laserPrinters: yup.number().required('The number of laser printers is required').positive('The number of laser printers has to be positive').integer(),
-  netDevices: yup.number().required('The number of net devices is required').positive('The number of net devices has to be positive').integer(),
-  posPrinters: yup.number().required('The number of POS printers is required').positive('The number of POS printers has to be positive').integer(),
+  cameras: yup.number().required('The number of cameras is required').positive('The number of cameras has to be positive').integer().min(0),
+  computers: yup.number().required('The number of computers is required').positive('The number of computers has to be positive').integer().min(0),
+  inkPrinters: yup.number().required('The number of ink printers is required').positive('The number of ink printers has to be positive').integer().min(0),
+  laserPrinters: yup.number().required('The number of laser printers is required').positive('The number of laser printers has to be positive').integer().min(0),
+  netDevices: yup.number().required('The number of net devices is required').positive('The number of net devices has to be positive').integer().min(0),
+  posPrinters: yup.number().required('The number of POS printers is required').positive('The number of POS printers has to be positive').integer().min(0),
 });
 
 export const getValidationStatus = async(state: QuoteState, STEP_NUMBER: number): Promise<GetValidationStatus> => {
