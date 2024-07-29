@@ -1,0 +1,66 @@
+.secured_text {
+  display: inline-flex;
+}
+
+.item_container {
+  -webkit-print-color-adjust: exact;
+  align-items: center;
+  background-color: black;
+  display: flex;
+  height: 42px;
+  padding: 1px;
+  justify-content: center;
+  position: relative;
+  margin-right: 5px;
+  width: 40px;
+}
+
+.secured_item {
+  -webkit-print-color-adjust: exact;
+  color: white;
+  display: flex;
+  font-family: monospace;
+  font-size: 38px;
+  mix-blend-mode: exclusion;
+  text-shadow: 1px 4px 0 gray;
+  z-index: 1;
+}
+
+.item_mask {
+  -webkit-print-color-adjust: exact;
+  color: white;
+  font-family: monospace;
+  font-size: 10px;
+  position: absolute;
+  right: 34px;
+  top: 0;
+  text-shadow: 0 8px 0 white, 
+               0 16px 0 white,
+               0 24px 0 white,
+               0 32px 0 white,
+    
+               8px 0 0 white,
+               8px 8px 0 white, 
+               8px 16px 0 white,
+               8px 24px 0 white,
+               8px 32px 0 white,
+       
+               16px 0 0 white,
+               16px 8px 0 white, 
+               16px 16px 0 white,
+               16px 24px 0 white,
+               16px 32px 0 white,
+           
+               24px 0 0 white,
+               24px 8px 0 white, 
+               24px 16px 0 white,
+               24px 24px 0 white,
+               24px 32px 0 white,
+    
+               32px 0 0 white,
+               32px 8px 0 white, 
+               32px 16px 0 white,
+               32px 24px 0 white,
+               32px 32px 0 white;
+  user-select: none;
+}
