@@ -10,10 +10,17 @@
   "properties": {
     "name": {
       "id": "name",
-      "type": "string",
+      "type": "text",
       "title": "Name",
       "default": "Chuck",
       "name": "name"
+    },
+    "contact": {
+      "id": "contact",
+      "type": "text",
+      "title": "Contact",
+      "default": "Chuck",
+      "name": "contact"
     },
     "email": {
       "id": "email",

@@ -30,12 +30,33 @@
       "default": "Chuck",
       "name": "cameras"
     },
-    "printers": {
-      "id": "printers",
+    "laserPrinters": {
+      "id": "laserPrinters",
       "type": "number",
-      "title": "Printers",
-      "default": "Chuck",
-      "name": "printers"
-    }
+      "title": "Laser Printers",
+      "default": 0,
+      "name": "laserPrinters"
+    },
+    "inkPrinters": {
+      "id": "inkPrinters",
+      "type": "number",
+      "title": "Ink Printers",
+      "default": 0,
+      "name": "inkPrinters"
+    },
+    "posPrinters": {
+      "id": "posPrinters",
+      "type": "number",
+      "title": "POS Printers",
+      "default": 0,
+      "name": "posPrinters"
+    },
+    "netDevices": {
+      "id": "netDevices",
+      "type": "number",
+      "title": "Network Devices",
+      "default": 0,
+      "name": "netDevices"
+    } 
   }
 }

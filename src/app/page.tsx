@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { UserInfoForm } from "@/components/form/UserInfo";
+import { UserInfoFormContainer } from "@/components/form/UserInfoFormContainer";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
           <p>Made it with love with&nbsp;</p>
           <Image
             className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-            src="/next.svg"
+            src="/my-quotes-app/next.svg"
             alt="Next.js Logo"
             width={90}
             height={34}
@@ -20,9 +20,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="mb-32 mt-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-2 lg:text-left">
-        <UserInfoForm />
-      </div>
+      <UserInfoFormContainer />
 
       <div className="mb-32 grid text-center lg:mb-1 lg:mt-2 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
         <p className="m-0 max-w-[30ch] text-sm opacity-50">

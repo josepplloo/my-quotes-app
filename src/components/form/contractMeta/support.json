@@ -1,0 +1,32 @@
+{
+  "title": "Support",
+  "description": "Select the ones who apply to you.",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "level1": {
+      "id": "level1",
+      "type": "radio",
+      "title": "Onsite",
+      "name": "support"
+    },
+    "level2": {
+      "id": "level2",
+      "type": "radio",
+      "title": "Remote",
+      "name": "support"
+    },
+    "level3": {
+      "id": "level3",
+      "type": "radio",
+      "title": "Remote & Onsite",
+      "name": "support"
+    },
+    "level4": {
+      "id": "level4",
+      "type": "radio",
+      "title": "Level4: External",
+      "name": "support"
+    }
+  }
+}

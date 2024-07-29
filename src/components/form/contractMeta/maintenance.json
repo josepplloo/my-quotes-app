@@ -1,0 +1,32 @@
+{
+  "title": "Maintenances",
+  "description": "Select the ones who apply to you.",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "corrective": {
+      "id": "corrective",
+      "type": "radio",
+      "title": "1 per year",
+      "name": "maintenance"
+    },
+    "preventive": {
+      "id": "preventive",
+      "type": "radio",
+      "title": "2 per year",
+      "name": "maintenance"
+    },
+    "predictive": {
+      "id": "predictive",
+      "type": "radio",
+      "title": "3 per year",
+      "name": "maintenance"
+    },
+    "proactive": {
+      "id": "proactive",
+      "type": "radio",
+      "title": "Proactive",
+      "name": "maintenance"
+    }
+  }
+}

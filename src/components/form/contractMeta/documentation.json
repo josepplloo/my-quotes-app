@@ -1,0 +1,44 @@
+{
+  "title": "Service Promise",
+  "description": "Select the ones who apply to you.",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "tier1": {
+      "id": "tier1",
+      "type": "radio",
+      "title": "SLA: 3 hour max",
+      "name": "sla"
+    },
+    "tier2": {
+      "id": "tier2",
+      "type": "radio",
+      "title": "SLA: 4 hour min",
+      "name": "sla"
+    },
+    "tier3": {
+      "id": "tier3",
+      "type": "radio",
+      "title": "SLA: 6 hour min",
+      "name": "sla"
+    },
+    "documentation": {
+      "id": "documentation",
+      "type": "checkbox",
+      "title": "Documentation",
+      "name": "documentation"
+    },
+    "report": {
+      "id": "report",
+      "type": "checkbox",
+      "title": "Monthly report",
+      "name": "report"
+    },
+    "branches": {
+      "id": "branches",
+      "type": "checkbox",
+      "title": "Additional Branches",
+      "name": "branches"
+    }
+  }
+}
